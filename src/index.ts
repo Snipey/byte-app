@@ -29,11 +29,11 @@ export default class Byte {
   public me = async (): Promise<any> =>
     await this.request("GET", "/account/me");
 
-  public following = async (): Promise<any> =>
-    await this.request("GET", "/account/me/following");
+  public following = async (cursor: string = ""): Promise<any> =>
+    await this.request("GET", `/account/me/following?cursor=${cursor}`);
 
-  public liked = async (): Promise<any> =>
-    await this.request("GET", "/account/me/feedback/like");
+  public liked = async (cursor: string = ""): Promise<any> =>
+    await this.request("GET", `/account/me/feedback/like?cursor=${cursor}`);
 
   public settings = async (body: ISettings): Promise<any> =>
     await this.request("PUT", "/account/me", body);
@@ -57,6 +57,9 @@ export default class Byte {
   public unlike = async (post: string): Promise<any> =>
     await this.request("DELETE", `/post/id/${post}/feedback/like`);
 
+  public loop = async (post: string): Promise<any> =>
+    await this.request("POST", `/post/id/${post}/loop`);
+
   public comment = async (post: string, body: string): Promise<any> =>
     await this.request("POST", `/post/id/${post}/feedback/comment`, { body });
 
@@ -64,15 +67,27 @@ export default class Byte {
     await this.request("GET", `/prefix/${user}`);
 
   public explore = {
-    popular: async (): Promise<any> =>
-      await this.request("GET", `/feed/popular`),
+    popular: async (cursor: string = ""): Promise<any> =>
+      await this.request("GET", `/feed/popular?cursor=${cursor}`),
+    latest: async (cursor: string = ""): Promise<any> =>
+      await this.request("GET", `/feed/global?cursor=${cursor}`),
     category: async (
       category: string,
+      cursor: string = "",
       filter: string = "popular"
     ): Promise<any> =>
-      await this.request("GET", `/categories/${category}/${filter}`)
+      await this.request(
+        "GET",
+        `/categories/${category}/${filter}?cursor=${cursor}`
+      )
   };
 
-  public timeline = async (mode: null | string = null): Promise<any> =>
-    await this.request("GET", `/timeline${mode ? `/${mode}` : ""}`);
+  public timeline = async (
+    mode: null | string = null,
+    cursor: string = ""
+  ): Promise<any> =>
+    await this.request(
+      "GET",
+      `/timeline${mode ? `/${mode}` : ""}?cursor=${cursor}`
+    );
 }
