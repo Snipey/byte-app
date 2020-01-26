@@ -1,5 +1,5 @@
 {
-  "name": "byte.js",
+  "name": "byte-app",
   "version": "1.0.0",
   "description": "An API Library for byte.co's unofficial API",
   "main": "index.js",
