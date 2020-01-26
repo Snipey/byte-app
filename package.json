@@ -1,6 +1,6 @@
 {
   "name": "byte-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An API Library for byte.co's unofficial API",
   "main": "index.js",
   "scripts": {
