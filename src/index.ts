@@ -57,6 +57,9 @@ export default class Byte {
   public unlike = async (post: string): Promise<any> =>
     await this.request("DELETE", `/post/id/${post}/feedback/like`);
 
+  public comment = async (post: string, body: string): Promise<any> =>
+    await this.request("POST", `/post/id/${post}/feedback/comment`, { body });
+
   public search = async (user: string): Promise<any> =>
     await this.request("GET", `/prefix/${user}`);
 
