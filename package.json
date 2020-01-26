@@ -1,0 +1,39 @@
+{
+  "name": "byte.js",
+  "version": "1.0.0",
+  "description": "An API Library for byte.co's unofficial API",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec --require ts-node/register tests/*.test.ts",
+    "lint": "tslint --project tsconfig.json --format stylish src/**/*.ts",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimothyCole/byte.js.git"
+  },
+  "keywords": [
+    "byte",
+    "byte_app",
+    "vine2",
+    "byte-js"
+  ],
+  "author": "Timothy Cole <tim@timcole.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimothyCole/byte.js/issues"
+  },
+  "homepage": "https://github.com/TimothyCole/byte.js#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.7",
+    "@types/isomorphic-fetch": "0.0.35",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "chai": "^4.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^7.0.1",
+    "typescript": "^3.7.5"
+  }
+}
