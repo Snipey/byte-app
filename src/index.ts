@@ -68,7 +68,7 @@ export default class Byte {
 
   public explore = {
     popular: async (cursor: string = ""): Promise<any> =>
-      await this.request("GET", `/feed/popular?cursor=${cursor}`),
+      await this.request("GET", `/feed/popular/v2?cursor=${cursor}`),
     latest: async (cursor: string = ""): Promise<any> =>
       await this.request("GET", `/feed/global?cursor=${cursor}`),
     category: async (
