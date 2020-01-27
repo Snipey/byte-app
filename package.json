@@ -1,8 +1,9 @@
 {
   "name": "byte-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An API Library for byte.co's unofficial API",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "mocha --reporter spec --require ts-node/register tests/*.test.ts",
