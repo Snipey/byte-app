@@ -1,6 +1,6 @@
 {
   "name": "byte-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An API Library for byte.co's unofficial API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,5 +36,8 @@
     "isomorphic-fetch": "^2.2.1",
     "mocha": "^7.0.1",
     "typescript": "^3.7.5"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
