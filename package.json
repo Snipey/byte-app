@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TimothyCole/byte.js.git"
+    "url": "git+https://github.com/TimothyCole/byte-app.git"
   },
   "keywords": [
     "byte",
@@ -23,9 +23,9 @@
   "author": "Timothy Cole <tim@timcole.me>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TimothyCole/byte.js/issues"
+    "url": "https://github.com/TimothyCole/byte-app/issues"
   },
-  "homepage": "https://github.com/TimothyCole/byte.js#readme",
+  "homepage": "https://github.com/TimothyCole/byte-app#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.2.7",
