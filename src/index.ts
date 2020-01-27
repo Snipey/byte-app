@@ -54,6 +54,9 @@ export default class Byte {
   public like = async (post: string): Promise<any> =>
     await this.request("PUT", `/post/id/${post}/feedback/like`);
 
+  public likes = async (post: String, cursor: string = ""): Promise<any> =>
+    await this.request("GET", `/post/id/${post}/feedback/like?cursor=${cursor}`);
+
   public unlike = async (post: string): Promise<any> =>
     await this.request("DELETE", `/post/id/${post}/feedback/like`);
 
